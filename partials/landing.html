@@ -1,0 +1,65 @@
+<!--preloader is below -->
+<div ng-show="preloader" class="preloader-wrapper big active" ng-cloak>
+  <div class="spinner-layer spinner-blue">
+    <div class="circle-clipper left">
+      <div class="circle"></div>
+    </div><div class="gap-patch">
+      <div class="circle"></div>
+    </div><div class="circle-clipper right">
+      <div class="circle"></div>
+    </div>
+  </div>
+
+  <div class="spinner-layer spinner-red">
+    <div class="circle-clipper left">
+      <div class="circle"></div>
+    </div><div class="gap-patch">
+      <div class="circle"></div>
+    </div><div class="circle-clipper right">
+      <div class="circle"></div>
+    </div>
+  </div>
+
+  <div class="spinner-layer spinner-yellow">
+    <div class="circle-clipper left">
+      <div class="circle"></div>
+    </div><div class="gap-patch">
+      <div class="circle"></div>
+    </div><div class="circle-clipper right">
+      <div class="circle"></div>
+    </div>
+  </div>
+
+  <div class="spinner-layer spinner-green">
+    <div class="circle-clipper left">
+      <div class="circle"></div>
+    </div><div class="gap-patch">
+      <div class="circle"></div>
+    </div><div class="circle-clipper right">
+      <div class="circle"></div>
+    </div>
+  </div>
+</div>
+<!-- will be building the contacts with search -->
+<div ng-show="contacts" ng-cloak>
+  <h4 class="thin center-align">Contacts</h4>
+  <div class="input-field col s12" >
+    <input ng-model="searchText" id="searchip" type="text" class="validate">
+    <label for="searchip">Search Here</label>
+  </div>
+  <table>
+    <thead>
+      <tr>
+          <th>Name</th>
+          <th>Phone</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr ng-repeat="each in ContactsResult | filter:searchText">
+        <td>{{each.Name}}</td>
+        <td>{{each.Phone}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

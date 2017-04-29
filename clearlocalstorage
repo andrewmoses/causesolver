@@ -1,0 +1,10 @@
+var storage = window.localStorage;
+storage.removeItem('avatar');
+storage.removeItem('nickname');
+storage.removeItem('privatekey');
+storage.removeItem('pubkey');
+storage.removeItem('type');
+
+var value = storage.getItem(key); // Pass a key name to get its value.
+storage.setItem(key, value) // Pass a key name and its value to add or update that key.
+storage.removeItem(key)
