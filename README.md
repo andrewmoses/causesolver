@@ -1,4 +1,4 @@
-Caues Solver
+Cause Solver
 ============
 
 ## Requirements
