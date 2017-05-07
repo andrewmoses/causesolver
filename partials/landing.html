@@ -53,34 +53,20 @@
   <table class="highlight">
     <thead>
       <tr>
-          <th>Name</th>
-          <th>Phone</th>
+          <th style="width:70%">Name</th>
+          <th style="width:30%">Place/Email</th>
       </tr>
     </thead>
 
     <tbody>
-      <tr ng-repeat="each in ContactsResult | filter:searchText" ng-click="detailedcontact(each)">
-        <td>{{each.Name}}</td>
-        <td>{{each.Phone}}</td>
+      <tr ng-repeat="each in ContactsResult | filter:searchText">
+        <td><a href="#/usdata/{{each.objectId}}">{{each.Name}}</a></td>
+        <td>{{each.cityorvillage}}</td>
       </tr>
     </tbody>
   </table>
 </div>
-<!-- detailed contact -->
-<div ng-show="contactview" ng-cloak>
-  <p class="flow-text">
-    <b>Name:</b> {{contactda.Name}} <br>
-    <b>Phone:</b> {{contactda.Phone}} <br>
-    <b>Email:</b> {{contactda.Email}} <br>
-    <b>City or Village:</b> {{contactda.cityorvillage}} <br>
-    <b>State and Country:</b> {{contactda.statecountry}} <br><br>
-    <b>Give a small example if you ever tried to reduce someones pain or helped someone in smallest possible way?</b><br>{{contactda.selfexample}}<br><br>
-    <b>Why do you want to join the group?</b><br> {{contactda.whyjoin}}<br><br>
-    <b>I am interested to help people who needs help in following area(s):</b><br> {{contactda.readyarea}}<br><br>
-    <b>I can contribute to following fields:</b><br> {{contactda.expertise}}<br><br>
-    <b>In what platform(s) you want to join and communicate ?</b><br> {{contactda.platforms}}
-  </p>
-</div>
+
 <!-- floating home button -->
 <div class="fixed-action-btn">
   <a ng-click="reloadroute()" class="btn-floating btn-large blue">
