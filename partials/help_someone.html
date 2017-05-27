@@ -1,0 +1,73 @@
+<!--preloader is below -->
+<div ng-show="preloader">
+  <center>
+    <br>
+    <div class="preloader-wrapper big active" ng-cloak>
+      <div class="spinner-layer spinner-blue">
+        <div class="circle-clipper left">
+          <div class="circle"></div>
+        </div><div class="gap-patch">
+          <div class="circle"></div>
+        </div><div class="circle-clipper right">
+          <div class="circle"></div>
+        </div>
+      </div>
+
+      <div class="spinner-layer spinner-red">
+        <div class="circle-clipper left">
+          <div class="circle"></div>
+        </div><div class="gap-patch">
+          <div class="circle"></div>
+        </div><div class="circle-clipper right">
+          <div class="circle"></div>
+        </div>
+      </div>
+
+      <div class="spinner-layer spinner-yellow">
+        <div class="circle-clipper left">
+          <div class="circle"></div>
+        </div><div class="gap-patch">
+          <div class="circle"></div>
+        </div><div class="circle-clipper right">
+          <div class="circle"></div>
+        </div>
+      </div>
+
+      <div class="spinner-layer spinner-green">
+        <div class="circle-clipper left">
+          <div class="circle"></div>
+        </div><div class="gap-patch">
+          <div class="circle"></div>
+        </div><div class="circle-clipper right">
+          <div class="circle"></div>
+        </div>
+      </div>
+    </div>
+  </center>
+</div>
+<!-- list of helps posted by people -->
+<div ng-show="listofhelps" ng-cloak>
+  <h4 class="thin center-align">Help Someone</h4>
+  <div class="input-field col s12" >
+    <input ng-model="searchText" id="searchip" type="text" class="validate">
+    <label for="searchip">Search Here</label>
+  </div>
+  <table class="highlight truncate">
+    <thead>
+      <tr>
+          <th>Issues</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="each in issuesresult | filter:searchText">
+        <td><a href="#/helpdata/{{each.objectId}}">{{each.title}}</a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<!-- floating home button -->
+<div class="fixed-action-btn">
+  <a ng-click="reloadroute()" class="btn-floating btn-large blue">
+    <i class="large material-icons">replay</i>
+  </a>
+</div>

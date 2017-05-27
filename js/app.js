@@ -12,6 +12,18 @@ angular.module('App', ['ngRoute', 'App.services', 'App.controllers'])
         templateUrl: 'partials/userdetails.html',
         controller: 'ParamController'
       })
+      .when('/helpdata/:qid', {
+        templateUrl: 'partials/helpdetails.html',
+        controller: 'HelpParamController'
+      })
+      .when('/help_someone', {
+        templateUrl: 'partials/help_someone.html',
+        controller: 'HelpSomeoneController'
+      })
+      .when('/need_help', {
+        templateUrl: 'partials/need_help.html',
+        controller: 'NeedHelpController'
+      })
       .otherwise({
         redirectTo: '/'
       });
