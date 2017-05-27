@@ -50,23 +50,26 @@
     <input ng-model="searchText" id="searchip" type="text" class="validate">
     <label for="searchip">Search Here</label>
   </div>
-  <table class="highlight">
+  <table class="highlight truncate">
     <thead>
       <tr>
-          <th style="width:70%">Name</th>
-          <th style="width:30%">Place/Email</th>
+          <th>Name</th>
+          <th>Place/Email</th>
       </tr>
     </thead>
 
     <tbody>
       <tr ng-repeat="each in ContactsResult | filter:searchText">
+
+
         <td><a href="#/usdata/{{each.objectId}}">{{each.Name}}</a></td>
+
+
         <td>{{each.cityorvillage}}</td>
       </tr>
     </tbody>
   </table>
 </div>
-
 <!-- floating home button -->
 <div class="fixed-action-btn">
   <a ng-click="reloadroute()" class="btn-floating btn-large blue">
